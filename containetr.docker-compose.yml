@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  ambermd_TEST77:
+    image:   amber_test01_ambermd
+    command: bash
+    volumes:
+      - /home/irgb/mutation_from_csiguri/:/work
+    environment:
+      - WORKDIR=/work
+      - PATH=/opt/amber22/bin:$PATH
+    #command: pwd && pmemd.cuda -O -i equil.in -o equilprova.out -p 4ksj_wt_ion.prmtop -c density.rst -r equilprova.rst -x equilprova.mdcrd -ref equilprova.info
